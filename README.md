@@ -52,7 +52,7 @@ Derived columns:
 - **Bar Chart**: Best Selling Categories
 - **Donut Chart**: Sales by Gender
 
-![Sales Overview Dashboard](RETAIL_SALES_ANALYSIS/PowerBI/dashboard_screenshots/PAGE_1.png)
+![Sales Overview Dashboard](RETAIL_SALES_ANALYSIS/Power_BI/PAGE_1.png)
 
 ---
 
@@ -65,6 +65,7 @@ Derived columns:
 - **Bar Chart**: Age Group Distribution and Gender vs Total Sales 
 - **Scatter Plot**: Age vs. Average Purchase Value 
 
+![Customer Demographics](RETAIL_SALES_ANALYSIS/Power_BI/PAGE_2.png)
 ---
 
 ### 🔹 Page 3: Profit & Cost Analysis  
@@ -76,6 +77,7 @@ Derived columns:
 - **Bar/Column Chart**: Highest Cost Categories 
 - **Scatter Plot**: Profitability Trends by Price 
 
+![Profit & Cost Analysis](RETAIL_SALES_ANALYSIS/Power_BI/PAGE_3.png)
 ---
 
 ### 🔍 Key Insights  
