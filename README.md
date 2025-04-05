@@ -80,9 +80,54 @@ Derived columns:
 ![Profit & Cost Analysis](RETAIL_SALES_ANALYSIS/Power_BI/PAGE_3.png)
 ---
 
+
 ### 🔍 Key Insights  
 - **Customer Behavior**: Ages 46–55 are most active  
 - **Sales Trends**: Seasonal patterns with clear peaks  
 - **Top Products**: Clothing & Beauty dominate  
 
 ---
+
+## SQL Queries for Retail Sales Analysis
+
+In this section, I provide a set of SQL queries used to analyze sales data, retrieve insights, and perform specific tasks based on the retail sales data.
+
+### 1. Sales on a Specific Date
+**Query:** Retrieve all columns for sales made on '2022-11-05'
+
+```sql
+SELECT *
+FROM retail_sales
+WHERE sale_date = '2022-11-05'
+```
+
+### 2. Clothing Sales in November 2022 with Quantity Sold More Than 4
+**Query:** Retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of November 2022
+
+```sql
+SELECT 
+  *
+FROM retail_sales
+WHERE 
+    category = 'Clothing'
+    AND 
+    TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
+    AND
+    quantity >= 4;
+
+```
+
+
+### 3. Total Sales for Each Category
+**Query:** Calculate the total sales (total_sale) for each category
+
+```sql
+SELECT 
+    category,
+    SUM(total_sale) as net_sale,
+    COUNT(*) as total_orders
+FROM retail_sales
+GROUP BY 1;
+
+
+```
