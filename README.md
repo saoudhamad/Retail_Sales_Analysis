@@ -207,7 +207,7 @@ GROUP BY shift;
 
 ```
 
-## Explanation:
+## Resources:
 - The **Power_BI** section contains all the pages with screenshots and the Power BI file.
 - The **SQL** section includes all the SQL queries with explanations in the same document.
 - The **Data** section provides the dataset used for this project.
