@@ -47,9 +47,10 @@ Derived columns:
 **Goal:** Show KPIs and category-level performance.  
 
 **Visuals:**  
-- **KPI Cards**: Total Sales, Profit, Orders, Profit Margin  
+- **KPI Cards**: Total Sales, Total Quantity, Average Price per Unit 
 - **Line Chart**: Sales over Time  
-- **Bar Chart**: Top Product Categories  
+- **Bar Chart**: Best Selling Categories
+- **Donut Chart**: Sales by Gender
 
 ---
 
@@ -57,11 +58,10 @@ Derived columns:
 **Goal:** Understand who the customers are.  
 
 **Visuals:**  
-- **Pie Chart**: Gender Distribution  
-- **Histogram**: Age Distribution  
-- **Bar Chart**: Sales by Age Group  
-- **Scatter Plot**: Age vs. Average Purchase Value  
-  - **Y-Axis**: `total_sales / COUNT(customer_id)`
+- **KPI Cards**: Total Customers, Average Customer Age
+- **Donut Chart**: Gender Distribution  
+- **Bar Chart**: Age Group Distribution and Gender vs Total Sales 
+- **Scatter Plot**: Age vs. Average Purchase Value 
 
 ---
 
@@ -69,26 +69,16 @@ Derived columns:
 **Goal:** Understand profitability and cost dynamics.  
 
 **Visuals:**  
-- **Bar/Column Chart**: Profit by Category  
-- **Combo Chart**: Sales vs. COGS  
-- **Line Chart**: Monthly Profit Trend  
-
----
-
-### 🔹 Page 4: Time-Based Insights  
-**Goal:** Understand when sales happen.  
-
-**Visuals:**  
-- **Bar Chart**: Orders by Shift (Morning, Afternoon, Evening)  
-- **Line Chart**: Daily Sales Trend  
-- **Heatmap**: Sales by Day and Hour  
+- **KPI Cards**: Total Cost of Goods Sold, Total Profit, Profit Margin
+- **Bar/Column Chart**: Profit by Category
+- **Bar/Column Chart**: Highest Cost Categories 
+- **Scatter Plot**: Profitability Trends by Price 
 
 ---
 
 ### 🔍 Key Insights  
-- **Customer Behavior**: Ages 26–35 are most active  
+- **Customer Behavior**: Ages 46–55 are most active  
 - **Sales Trends**: Seasonal patterns with clear peaks  
 - **Top Products**: Clothing & Beauty dominate  
-- **Time Patterns**: Evening sales highest  
 
 ---
