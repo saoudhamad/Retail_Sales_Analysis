@@ -131,3 +131,78 @@ GROUP BY 1;
 
 
 ```
+
+### 4. Average Age of Customers Who Purchased from 'Beauty' Category
+**Query:** Find the average age of customers who purchased items from the 'Beauty' category
+
+```sql
+SELECT
+    ROUND(AVG(age), 2) as avg_age
+FROM retail_sales
+WHERE category = 'Beauty';
+
+```
+
+### 5. Number of Transactions by Gender and Category
+**Query:** Find the total number of transactions made by each gender in each category
+
+```sql
+SELECT 
+    category,
+    gender,
+    COUNT(*) as total_trans
+FROM retail_sales
+GROUP 
+    BY 
+    category,
+    gender
+ORDER BY 1;
+
+
+```
+
+### 6. Best Selling Month of Each Year
+**Query:** Calculate the average sale for each month and find the best-selling month for each year
+
+```sql
+SELECT 
+       year,
+       month,
+    avg_sale
+FROM 
+(    
+SELECT 
+    EXTRACT(YEAR FROM sale_date) as year,
+    EXTRACT(MONTH FROM sale_date) as month,
+    AVG(total_sale) as avg_sale,
+    RANK() OVER(PARTITION BY EXTRACT(YEAR FROM sale_date) ORDER BY AVG(total_sale) DESC) as rank
+FROM retail_sales
+GROUP BY 1, 2
+) as t1
+WHERE rank = 1;
+
+
+```
+
+### 7. Number of Orders by Shift (Morning, Afternoon, Evening)
+**Query:** Create each shift (Morning <12, Afternoon 12-17, Evening >17) and count the number of orders
+
+```sql
+WITH hourly_sale
+AS
+(
+SELECT *,
+    CASE
+        WHEN EXTRACT(HOUR FROM sale_time) < 12 THEN 'Morning'
+        WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 12 AND 17 THEN 'Afternoon'
+        ELSE 'Evening'
+    END as shift
+FROM retail_sales
+)
+SELECT 
+    shift,
+    COUNT(*) as total_orders    
+FROM hourly_sale
+GROUP BY shift;
+
+```
