@@ -4,8 +4,7 @@
 
 ## 📌 Project Overview
 This end-to-end project analyzes retail sales data using SQL and Power BI. It showcases how raw transactional data can be transformed, analyzed, and visualized to uncover insights around customer behavior, category performance, and sales trends.
-
-- **Level**: Beginner  
+  
 - **Tools**: PostgreSQL (SQL), Power BI  
 - **Dataset**: Simulated retail sales data  
 
