@@ -52,6 +52,8 @@ Derived columns:
 - **Bar Chart**: Best Selling Categories
 - **Donut Chart**: Sales by Gender
 
+![Sales Overview Dashboard](RETAIL_SALES_ANALYSIS/PowerBI/dashboard_screenshots/page1_sales_overview.png)
+
 ---
 
 ### 🔹 Page 2: Customer Demographics  
